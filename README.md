@@ -2,10 +2,10 @@
 
 ## Brief Description for Printf:
 
-          ###Synopsis:
-"#include <stdio.h>
+                Synopsis:
+                       "#include <stdio.h>
 
-int printf(const char *format, ...);"
+                        int printf(const char *format, ...);"
           
 The printf function sends formatted output to stdout (the standard output, usually your screen).
 
