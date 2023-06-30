@@ -1,0 +1,32 @@
+_Printf Man Page
+
+Description: Prints data and its format
+
+The function prints argument(s) according to its format
+
+The function can take an indefinite amount of arguments.
+
+Example:
+_printf("%c", character)
+
+This prints a character given by the user and it is printed in the format of character.
+
+When the format contains format specifiers (sequences that start with %), the corresponding additional arguments are formatted and substituted into the resulting string, replacing their respective specifiers.
+
+Please see conversion specifiers:
+
+%d or %i: Signed decimal integer.
+%u: Unsigned decimal integer.
+%o: Unsigned octal.
+%x or %X: Unsigned hexadecimal (lowercase or uppercase).
+%f: Decimal floating point (standard notation).
+%e or %E: Scientific notation (exponential format).
+%g or %G: Decimal floating point (shortest representation: %f or %e).
+%c: Character.
+%s: String of characters.
+%p: Pointer address.
+%n: Stores the number of characters written so far.
+%%: Prints a literal percent symbol %.
+
+Authors:
+Manow and Maria
