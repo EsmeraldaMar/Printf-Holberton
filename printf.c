@@ -1,22 +1,4 @@
-#include "printf.h"
-
-void printf_char(va_list box)
-{
-	putchar(va_arg(box, int));
-}
-
-void printf_string(va_list box)
-{
-	int i = 0;
-	char *str;
-
-	str = va_arg(box, char*);
-	while (str[i])
-	{
-		putchar(str[i]);
-		i++;
-	}
-}
+#include "main.h"
 
 /**
  * _printf - print stuff
@@ -48,7 +30,7 @@ int _printf(const char *format, ...)
 			{
 				if (*printf_struct[j].op == format[i + 1])
 				{
-					printf_struct[j].f(box);
+					length += printf_struct[j].f(box);
 					found = 1;
 				}
 				j++;
@@ -71,11 +53,3 @@ int _printf(const char *format, ...)
 	return (length);
 }
 
-int main(void)
-{
-	_printf("Let's try to printf a simple sentence.\n");
-	_printf("String:[%s]\n", "I am a string !");
-	_printf("Percent:[%%]\n");
-	_printf("Character:[%c]\n", 'H');
-	return (0);
-}

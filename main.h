@@ -11,6 +11,10 @@
 typedef struct print_struct
 {
 	char *op;
-	void (*f)();
+	int (*f)();
 } print_t;
+int _putchar(char c);
+int _printf(const char *format, ...);
+int printf_char(va_list box);
+int printf_string(va_list box);
 #endif
