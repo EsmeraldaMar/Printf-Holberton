@@ -56,15 +56,13 @@ int _printf(const char *format, ...)
 			j = 0;
 			if (format[i + 1] == '%')
 			{
-				putchar('%');
-				length += 1;
+				length += _putchar('%');
 				i++;
 			}
 		}
 		else if (found == 0)
 		{
-			putchar(format[i]);
-			length += 1;
+			length += _putchar(format[i]);
 		}
 		else
 			found = 0;
