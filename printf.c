@@ -18,11 +18,20 @@ void printf_string(va_list box)
 	}
 }
 
+/**
+ * _printf - print stuff
+ *
+ * @format: string to receive
+ * @...: list of items
+ *
+ * Return: length
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0;
 	int j = 0;
 	int found = 0;
+	int length = 0;
 	va_list box;
 	print_t printf_struct[] = {
 		{"c", printf_char},
@@ -48,16 +57,20 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '%')
 			{
 				putchar('%');
+				length += 1;
 				i++;
 			}
 		}
 		else if (found == 0)
+		{
 			putchar(format[i]);
+			length += 1;
+		}
 		else
 			found = 0;
 		i++;
 	}
-	return (0);
+	return (length);
 }
 
 int main(void)
